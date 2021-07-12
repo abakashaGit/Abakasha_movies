@@ -4,7 +4,11 @@ import android.app.Application
 import com.panda.abakasha_movies.presentation.di.Injector
 import com.panda.abakasha_movies.presentation.di.core.*
 import com.panda.abakasha_movies.presentation.di.movies.MovieSubComponent
-
+/*
+    - application class for initializing the DaggerAppComponet.
+    - which implement the Injector interface
+    - override the create mothode for providing MovieSubComponent
+ */
 class App:Application(),Injector {
     private lateinit var appComponent: AppComponent
 

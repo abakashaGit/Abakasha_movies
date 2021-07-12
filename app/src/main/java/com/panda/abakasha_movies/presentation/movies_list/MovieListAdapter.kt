@@ -1,10 +1,8 @@
 package com.panda.abakasha_movies.presentation.movies_list
 
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -12,6 +10,7 @@ import com.panda.abakasha_movies.R
 import com.panda.abakasha_movies.data.model.Results
 import com.panda.abakasha_movies.databinding.MovieListItemBinding
 
+//Adapter class for populating the recycler view
 class MovieListAdapter() : RecyclerView.Adapter<MovieListAdapter.MyViewHolder>() {
 
     private val movieList = ArrayList<Results>()
@@ -40,7 +39,7 @@ class MovieListAdapter() : RecyclerView.Adapter<MovieListAdapter.MyViewHolder>()
         return movieList.size
     }
 
-
+    //View holder class for each item in recycler view.
     inner class MyViewHolder(private val binding: MovieListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
@@ -61,6 +60,7 @@ class MovieListAdapter() : RecyclerView.Adapter<MovieListAdapter.MyViewHolder>()
 
         }
     }
+
     private var onItemClickListener: ((Results) -> Unit)? = null
 
     fun setOnItemClickListener(listener: (Results) -> Unit) {

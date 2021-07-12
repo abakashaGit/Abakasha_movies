@@ -20,6 +20,7 @@ import com.panda.abakasha_movies.data.repository.MovieRepositoryImpl
 import com.panda.abakasha_movies.data.repository.datasourceimpl.MovieRemoteDataSourceImpl
 import com.panda.abakasha_movies.databinding.FragmentMovieListBinding
 import com.panda.abakasha_movies.domain.usecase.GetMoviesUseCase
+import com.panda.abakasha_movies.presentation.MainActivity
 import com.panda.abakasha_movies.presentation.di.Injector
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -41,21 +42,22 @@ class MovieListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        binding = FragmentMovieListBinding.inflate(inflater)
-        (activity?.application as Injector).createMovieSubComponent()
-        .inject(this)
-        return binding.root
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_movie_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentMovieListBinding.bind(view)
+        (activity?.application as Injector).createMovieSubComponent()
+            .inject(this)
+
         movieViewModel= ViewModelProvider(this,factory)
             .get(MovieListViewModel::class.java)
 
         initRecyclerView()
-
     }
+
     private fun showProgressBar(){
         isLoading = true
         binding.progressBar.visibility = View.VISIBLE

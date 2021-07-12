@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.panda.abakasha_movies.R
 import com.panda.abakasha_movies.data.model.Results
 import com.panda.abakasha_movies.databinding.FragmentMovieDetailBinding
-
+// Movie detail fragment for showing movie details.
 class MovieDetailFragment : Fragment() {
 
     private lateinit var binding:FragmentMovieDetailBinding

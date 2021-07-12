@@ -1,0 +1,31 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2021 The New York Times Company. All Rights Reserved.",
+  "has_more": true,
+  "num_results": 20,
+  "results": [
+    {
+      "display_title": "Summer '96",
+      "mpaa_rating": "",
+      "critics_pick": 0,
+      "byline": "Natalia Winkelman",
+      "headline": "‘Last Summer’ Review: Growing Pains",
+      "summary_short": "Sunny days turn to sweaty nights on the Mediterranean coast in this Turkish coming-of-age film that follows a teenage boy who pines for his older sister’s best friend.",
+      "publication_date": "2021-07-09",
+      "opening_date": "2021-07-09",
+      "date_updated": "2021-07-09 11:01:05",
+      "link": {
+        "type": "article",
+        "url": "https://www.nytimes.com/2021/07/09/movies/last-summer-review-Turkey.html",
+        "suggested_link_text": "Read the New York Times Review of Summer '96"
+      },
+      "multimedia": {
+        "type": "mediumThreeByTwo210",
+        "src": "https://static01.nyt.com/images/2021/07/10/arts/09last-summer-pix/09last-summer-pix-mediumThreeByTwo440.jpg",
+        "height": 140,
+        "width": 210
+      }
+    }
+
+  ]
+}

@@ -4,7 +4,7 @@ import com.panda.abakasha_movies.domain.usecase.GetMoviesUseCase
 import com.panda.abakasha_movies.presentation.movies_list.MovieListViewModelFactory
 import dagger.Module
 import dagger.Provides
-
+//Movie module for providing the ViewModel factory method
 @Module
 class MovieModule {
 
